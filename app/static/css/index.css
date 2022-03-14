@@ -1,0 +1,82 @@
+#top {
+    background-position: center;
+    background-color: beige;
+    height: 400px;
+}
+
+#arsub {
+    box-shadow: 2px 2px 2px 1px grey;
+}
+
+.sub {
+    margin-top: 10px;
+    padding: 5px;
+}
+
+#forth {
+    background-color: grey;
+    color: white;
+}
+
+.navbar-brand {
+    font-weight: 900;
+    color: black;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: black;
+}
+
+.panel-text a {
+    text-decoration: none;
+}
+
+.panel-heading a {
+    text-decoration: none;
+}
+
+input[type=submit] {
+    float: center;
+}
+
+#comm {
+    box-shadow: 2px 2px 2px 1px grey;
+}
+
+.panel-text a {
+    text-decoration: none;
+}
+
+#content {
+    margin-top: 10px;
+    box-shadow: 2px 2px 2px 1px grey;
+}
+
+button[type=submit] {
+    margin-left: 40%;
+}
+
+.btn-default,
+.btn-default:hover {
+    background-color: #000000;
+    border-color: #000000;
+    color: white;
+    margin-top: 10px;
+}
+
+#form {
+    border-radius: 10px;
+    background-color: #487cdd;
+    margin-bottom: 10px;
+}
+
+#footer {
+    bottom: 0;
+}
+
+.nav.navbar {
+    display: flex;
+    flex-direction: row;
+    /* color: red; */
+}
