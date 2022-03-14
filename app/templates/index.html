@@ -1,1 +1,44 @@
-{% extends 'base.html'%} {% block content %} {% endblock %}
+{% extends 'base.html'%} {% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 ">
+            {% for blog in blogs %}
+            <div class="panel panel-default text-center " id="arsub">
+                <div class="panel-heading">
+                    <h4 span style="font-weight: 900;"> <a href="{{url_for('main.blog',blog_id = blog.id)}}">{{ blog.title}}</a></h4>
+                </div>
+                <div class="panel-body">
+                    <p>{{ blog.content|safe }}</p>
+                    <p><b>{{ blog.author }}</b></p>
+                    <p class="panel-text"><strong>Created on: <span class="badge rounded-pill bg-warning text-dark">
+            {{ blog.date_created.strftime("%m/%d/%Y")}}</span></strong> <br>
+                        <a href="{{ url_for('main.comments', blog_id = blog.id)}}"><i class="fa fa-comments"
+              aria-hidden="true"></i>comment</a>
+                    </p>
+
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="col-md-6" id="top">
+            <h3 class="text-center" id="head"> Top Quotes</h3>
+            <p style="font-weight: 600;"> <i>{{ quote.quote}}</i> </p>
+            <p style="font-weight: 400;"> <strong>{{ quote.author}}</strong> </p>
+            <div class="sub">
+                <p class="text-center" style="color:green;"> <b>- Subscribe to Blog via Email -</b></p>
+
+                <form>
+
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your email address"><br>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                    <div>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
